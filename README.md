@@ -1,1 +1,5 @@
 # IFS-node
+
+
+## dependencies
+```jimp```
