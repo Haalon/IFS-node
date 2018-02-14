@@ -1,11 +1,9 @@
 var Jimp = require("jimp");
-//console.log(Jimp);
 const N = 1920;
 const M = 1024;
 const zoom = 0.5*1000;
 const outer_iter = 80000;
 const inner_iter = 1000;
-var resolution = M/N;
 
 function replaceAll(source, search, replacement) {
     
@@ -150,8 +148,6 @@ var model =
 
 model.gradient = chunk(replaceAll(model.palette,/\s/,""),6).map( hexToRgb )
 
-//console.log(model.gradient);
-
 function plot(x,y, c)
 {
 	var coord = Math.floor(c*255);
@@ -163,7 +159,6 @@ function plot(x,y, c)
 
 var core = function()
 {
-	//var resolution = M/N;
 	for (var i = 0; i < outer_iter; i++) {
 		var x = 1- Math.random()*2;
 		var y = 1-Math.random()*2;
@@ -191,24 +186,15 @@ var core = function()
 			field[i][j].r*=coeff;
 			field[i][j].g*=coeff;
 			field[i][j].b*=coeff;
-
 			
-        	if (field[i][j].r > 1)  field[i][j].r= 1;
-
-	        
-	        
-	        if (field[i][j].g > 1)  field[i][j].g= 1;
-
-	        
-	       
+        		if (field[i][j].r > 1)  field[i][j].r= 1;
+	        	if (field[i][j].g > 1)  field[i][j].g= 1;
 			if (field[i][j].b > 1)  field[i][j].b= 1;
 		}
 	}
-
 }
-//console.log(model[0].matrix);
+
 core();
-//var max = Math.log(1+maxM(field));
  
 var image = new Jimp(N, M, function (err, image) {
 	image.scan(0, 0, image.bitmap.width, image.bitmap.height, function (x, y, idx) {	  
