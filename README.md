@@ -16,5 +16,5 @@
 You can change size, number of iterations and zoom in the first lines of ```core.js```
 You can also change the Model here, but there are only ```linear``` and ```juliaN``` transforms here.
 But it already can do some good stuff
-![Linear Square](https://pp.userapi.com/c824504/v824504168/c621d/aI03XzYPbV4.jpg)
+![Linear Square](https://pp.userapi.com/c834402/v834402168/ca016/oTcvxTsip0k.jpg)
 
