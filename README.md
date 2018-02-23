@@ -7,7 +7,7 @@
 ## installation
 * install node.js and npm: https://nodejs.org/en/
 * clone this repository
-* choose direcory with this rep in console and run ```npm install jimp```. "node_modules" directory should appear there
+* choose directory with this rep in console and run ```npm install jimp```. "node_modules" directory should appear there
 
 ## usage
 1. choose directory with ```core.js``` in console
